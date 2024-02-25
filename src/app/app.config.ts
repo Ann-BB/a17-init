@@ -15,6 +15,7 @@ export const appConfig: ApplicationConfig = {
       timeOut: 10000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
+      
     }),
    importProvidersFrom(NgxsModule.forRoot())]
 };
