@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComoseComponent } from './comose.component';
+import { MessageItemComponent } from './message-item.component';
 
-describe('ComoseComponent', () => {
-  let component: ComoseComponent;
-  let fixture: ComponentFixture<ComoseComponent>;
+describe('MessageItemComponent', () => {
+  let component: MessageItemComponent;
+  let fixture: ComponentFixture<MessageItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ComoseComponent]
+      imports: [MessageItemComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ComoseComponent);
+    fixture = TestBed.createComponent(MessageItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GuestComponent } from './guest.component';
+import { ToInputComponent } from './to-input.component';
 
-describe('GuestComponent', () => {
-  let component: GuestComponent;
-  let fixture: ComponentFixture<GuestComponent>;
+describe('ToInputComponent', () => {
+  let component: ToInputComponent;
+  let fixture: ComponentFixture<ToInputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GuestComponent]
+      imports: [ToInputComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GuestComponent);
+    fixture = TestBed.createComponent(ToInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

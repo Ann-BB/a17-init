@@ -9,13 +9,13 @@ import { NgxsModule } from '@ngxs/store';
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), 
-    provideAnimations(),  
-    provideToastr({
-      timeOut: 10000,
-      positionClass: 'toast-bottom-right',
-      preventDuplicates: true,
-      
-    }),
-   importProvidersFrom(NgxsModule.forRoot())]
+  providers: [provideRouter(routes),
+  provideAnimations(),
+  provideToastr({
+    timeOut: 10000,
+    positionClass: 'toast-top-center',
+    preventDuplicates: true,
+
+  }),
+  importProvidersFrom(NgxsModule.forRoot())]
 };

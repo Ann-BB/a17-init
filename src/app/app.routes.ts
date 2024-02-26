@@ -3,23 +3,16 @@ import { MasterComponent } from './shared/layouts/master/master.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { MessagesComponent } from './pages/messages/messages.component';
+import { ComposeComponent } from './pages/compose/compose.component';
 
 export const routes: Routes = [
     {
         path: '', component: MasterComponent,
         children: [
-            {
-                path: '', component: LoginComponent
-            },
-            {
-                path: 'register', component: RegisterComponent
-            },
-            {
-                path: 'massages', component: MessagesComponent
-            },
-            {
-                path: 'compose', component: MessagesComponent
-            }
+            { path: '', component: LoginComponent },
+            { path: 'register', component: RegisterComponent },
+            { path: 'messages', component: MessagesComponent },
+            { path: 'compose', component: ComposeComponent }
         ]
     }
 ];
