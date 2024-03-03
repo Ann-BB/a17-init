@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const UserSchema = new mongoose.Schema(
   {
@@ -19,11 +19,11 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
     socket: {
-      type: String
+      type: String,
     },
     status: {
       type: Number,
-      default: 1
+      default: 1,
     },
   },
   {
@@ -31,5 +31,4 @@ const UserSchema = new mongoose.Schema(
   }
 );
 
-
-export const UserModel = mongoose.model('User', UserSchema)
+export const UserModel = mongoose.model('User', UserSchema);
