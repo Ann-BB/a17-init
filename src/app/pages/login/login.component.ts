@@ -1,20 +1,43 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../shared/component/card/card.component';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthService } from '../../core/services/auth.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CommonModule, CardComponent, ReactiveFormsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  loginForm!: FormGroup;
 
-  constructor(private toastrService: ToastrService) { }
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService
+  ) { }
 
-  openToast() {
-    this.toastrService.success('working')
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required])
+    })
+
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      console.log(this.loginForm.value);
+      this.authService.login(this.loginForm.value).subscribe({
+        next(value) {
+          console.log(value);
+        },
+      });
+    } else {
+      this.loginForm.markAllAsTouched();
+    }
   }
 }
