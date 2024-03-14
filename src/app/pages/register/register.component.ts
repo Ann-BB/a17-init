@@ -7,8 +7,6 @@ import { CardComponent } from '../../shared/component/card/card.component';
   imports: [CardComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrl: './register.component.scss',
 })
-export class RegisterComponent {
-
-}
+export class RegisterComponent {}

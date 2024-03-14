@@ -8,8 +8,6 @@ import { RouterModule } from '@angular/router';
   imports: [CardComponent, RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrl: './sidebar.component.scss',
 })
-export class SidebarComponent {
-
-}
+export class SidebarComponent {}

@@ -8,8 +8,6 @@ import { SidebarComponent } from '../../shared/layouts/sidebar/sidebar.component
   imports: [CardComponent, SidebarComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './compose.component.html',
-  styleUrl: './compose.component.scss'
+  styleUrl: './compose.component.scss',
 })
-export class ComposeComponent {
-
-}
+export class ComposeComponent {}

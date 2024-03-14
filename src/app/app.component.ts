@@ -1,15 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
-import { RouterModule } from '@angular/router';
-import { MasterComponent } from './shared/layouts/master/master.component';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'a17';

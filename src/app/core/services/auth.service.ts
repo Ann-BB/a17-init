@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { ILogin, ILoginResponse } from '../models/auth.model';
+import { HttpClient } from '@angular/common/http';
 import { apiEndpoint } from '../constants/constants';
 import { TokenService } from './token.service';
 import { map } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient, private tokenService: TokenService) { }
+  constructor(private http: HttpClient, private tokenService: TokenService) {}
 
   login(data: ILogin) {
     return this.http
@@ -19,6 +19,7 @@ export class AuthService {
           console.log(response.data.token);
           if (response && response.data.token) {
             console.log(response.data.token);
+
             this.tokenService.setToken(response.data.token);
           }
           return response;

@@ -5,7 +5,6 @@ export interface IUser {
   token?: string;
 }
 
-
 export interface ILogin {
   email: string;
   password: string;
@@ -13,6 +12,5 @@ export interface ILogin {
 
 export interface ILoginResponse {
   message: string;
-  token: string;
   data: IUser;
-} 
+}

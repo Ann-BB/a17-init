@@ -2,7 +2,7 @@ export const constants = {
   CURRENT_TOKEN: 'CURRENT_TOKEN',
 };
 
-const APIURL = 'http://localhost:4200';
+const APIURL = 'http://localhost:4000';
 
 export const apiEndpoint = {
   AuthEndpoint: {
